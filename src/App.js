@@ -1,26 +1,23 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { ThemeProvider } from '@mui/material';
+import { StyledEngineProvider, CssBaseline } from '@mui/material';
+import NavigationScroll from './layout/NavigationScroll';
+import themes from './themes';
+
+import { useSelector } from 'react-redux';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+   const customization = useSelector((state) => state.customization);
+   return (
+      <StyledEngineProvider injectFirst>
+         <ThemeProvider theme={themes(customization)}>
+            <CssBaseline />
+            <NavigationScroll>
+               <h1>Setingup</h1>
+            </NavigationScroll>
+         </ThemeProvider>
+      </StyledEngineProvider>
+   );
 }
 
 export default App;
