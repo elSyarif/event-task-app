@@ -8,10 +8,21 @@ const initialState = {
 };
 
 const UiSlice = createSlice({
-   name: '@ui/custumaize',
+   name: '@ui/customization',
    initialState: initialState,
    reducers: {
-      customozation(state, action) {}
+      setMenu(state, action) {
+		  return {
+			  ...state,
+			  opened: action.opened
+		  }
+	  },
+	  setFontFamily(state, action){
+		  return{
+			  ...state,
+			  fontFamily: action.fontFamily
+		  }
+	  }
    }
 });
 
