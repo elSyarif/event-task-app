@@ -6,7 +6,7 @@ const Menu = [
   {
     id: 'feature',
     title: 'Feature',
-    caption: 'Apps',
+    caption: '',
     type: 'collapse',
     icon: 'dashboard',
     children: [
@@ -31,7 +31,7 @@ const Menu = [
   {
     id: 'pages',
     title: 'Pages',
-    caption: 'Apps',
+    caption: '',
     type: 'collapse',
     icon: 'dashboard',
     children: [
