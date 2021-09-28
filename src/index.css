@@ -1,0 +1,40 @@
+.app {
+  display: flex;
+  min-height: 100vh;
+}
+
+.sidebar {
+  width: 256px;
+  flex-shrink: 0;
+  border-right: 1px solid #ddd;
+}
+
+.content {
+  flex: 1;
+  padding: 1rem;
+}
+
+.metismenu,
+.metismenu ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.metismenu a {
+  display: block;
+  /* padding: 0.5rem 0rem; */
+  text-decoration: none;
+}
+/* 
+.metismenu a:hover {
+  color: rgb(65, 98, 207);
+}
+
+.metismenu .active {
+  background: #dbdbdb;
+  color: rgb(65, 98, 207);
+}
+.metismenu ul a {
+  padding-left: 2rem;
+} */
