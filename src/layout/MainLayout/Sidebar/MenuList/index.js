@@ -1,6 +1,9 @@
 import React from 'react';
 
+import { Typography } from '@mui/material';
+
 import MenuCollapse from './menuCollapse';
+import MenuItem from './MenuItem';
 
 const Menu = [
   {
@@ -14,7 +17,7 @@ const Menu = [
         id: 'todotask',
         title: 'Todo Task',
         type: 'item',
-        icon: 'task',
+        icon: '',
         url: '/todo',
         children: [],
       },
@@ -22,7 +25,7 @@ const Menu = [
         id: 'eventask',
         title: 'Event Task',
         type: 'item',
-        icon: 'calender',
+        icon: '',
         url: '/event',
         children: [],
       },
@@ -39,29 +42,46 @@ const Menu = [
         id: 'todotask2',
         title: 'Todo Task2',
         type: 'item',
-        icon: 'task',
-        url: '/todo2',
+        icon: '',
+        url: '/todo2po',
         children: [],
       },
       {
         id: 'eventask2',
         title: 'Event Task2',
         type: 'item',
-        icon: 'calender',
-        url: '/event2',
+        icon: '',
+        url: '/eventsa2',
         children: [],
       },
     ],
   },
+  {
+    id: 'shop',
+    title: 'Shop',
+    caption: '',
+    type: 'item',
+    icon: 'shop',
+    url: '/shop',
+    children: [],
+  },
 ];
 
-const MenuList = ({ menus }) => {
+const MenuList = () => {
   return (
     <>
       {Menu.map((item) => {
         switch (item.type) {
           case 'collapse':
             return <MenuCollapse key={item.id} menu={item} level={1} />;
+          case 'item':
+            return <MenuItem key={item.id} item={item} level={1} />;
+          default:
+            return (
+              <Typography key={item.id} variant="h6" color="error" align="center">
+                Menu Items Error
+              </Typography>
+            );
         }
       })}
     </>

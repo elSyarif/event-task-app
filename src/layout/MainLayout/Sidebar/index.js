@@ -8,7 +8,6 @@ import PerfectScrollbar from 'react-perfect-scrollbar';
 import { BrowserView, MobileView } from 'react-device-detect';
 
 import MenuList from './MenuList';
-import MenuItem from './MenuItem';
 
 const drawerWidth = 260;
 
@@ -68,7 +67,7 @@ const Sidebar = ({ drawerOpen, drawerToggle, window }) => {
         <PerfectScrollbar component="div" className={classes.ScrollHeight}>
           {/* Menu Item */}
           {/* MetisMenu */}
-          <MenuList menus={MenuItem} />
+          <MenuList />
         </PerfectScrollbar>
       </BrowserView>
       <MobileView>Mobile</MobileView>

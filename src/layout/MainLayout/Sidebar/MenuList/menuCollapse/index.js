@@ -88,7 +88,7 @@ const MenuCollapse = ({ menu, level }) => {
         return <MenuCollapse key={item.id} menu={item} level={level + 1} />;
       case 'item':
         return (
-          <MenuItem key={item.id} item={item}>
+          <MenuItem key={item.id} item={item} level={level + 1}>
             {' '}
             {item.title}
           </MenuItem>
