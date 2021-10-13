@@ -1,7 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
-  isOpen: [],
+  isOpen: null,
   fontFamily: `'Poppins', sans-serif`,
   borderRadius: 12,
   opened: true,
@@ -14,12 +14,15 @@ const UiSlice = createSlice({
     setMenu(state, action) {
       state.opened = action.payload;
     },
+    menuOpen(state, action) {
+      state.isOpen = action.payload;
+    },
     setFontFamily(state, action) {
       state.fontFamily = action.payload;
     },
   },
 });
 
-export const { setMenu } = UiSlice.actions;
+export const { setMenu, menuOpen, setFontFamily } = UiSlice.actions;
 
 export default UiSlice;
